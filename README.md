@@ -85,12 +85,17 @@ guide](https://tenbaht.github.io/sduino/api/migration/) for details.
 ### EEZ Studio LVGL 9.40 Compatibility
 
 Tools for fixing EEZ Studio generated code to work with LVGL 9.40 and newer.
-See [tools/eez-studio/README.md](tools/eez-studio/README.md) for details.
 
-Quick start:
+**Quick fix after code generation:**
 ```bash
 python tools/eez-studio/fix-lvgl940.py --in-place eez-flow.cpp eez-flow.h
 ```
+
+📚 **Documentation:**
+- 🚀 [Quick Fix Guide](tools/eez-studio/QUICK_FIX.md) - One command solution
+- 🇱🇹 [Lietuvių kalba](tools/eez-studio/LIETUVIU.md) - Lietuviškas vadovas
+- 📖 [Complete Solution](tools/eez-studio/SPRENDIMAS.md) - All 3 fix methods
+- 🔧 [Full Documentation](tools/eez-studio/README.md) - Detailed guide
 
 
 ## Compatibility with the Arduino world
