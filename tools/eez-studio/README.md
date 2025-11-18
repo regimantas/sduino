@@ -24,6 +24,12 @@ Use the `fix-lvgl940.py` Python script to automatically fix generated code files
 
 #### Usage
 
+Three script versions are available:
+- **Python** (`fix-lvgl940.py`): Cross-platform, most features
+- **Bash** (`fix-lvgl940.sh`): Linux/Mac, simple and fast
+- **Windows Batch** (`fix-lvgl940.bat`): Windows native
+
+**Python version:**
 ```bash
 # Preview changes (print to stdout)
 python fix-lvgl940.py eez-flow.cpp eez-flow.h
@@ -33,6 +39,36 @@ python fix-lvgl940.py --in-place eez-flow.cpp eez-flow.h
 
 # Fix files without creating backups
 python fix-lvgl940.py --in-place --no-backup eez-flow.cpp eez-flow.h
+```
+
+**Bash version (Linux/Mac):**
+```bash
+# Fix files without backup
+./fix-lvgl940.sh eez-flow.cpp eez-flow.h
+
+# Fix files with backup
+./fix-lvgl940.sh --backup eez-flow.cpp eez-flow.h
+```
+
+**Windows Batch version:**
+```cmd
+REM Fix files without backup
+fix-lvgl940.bat eez-flow.cpp eez-flow.h
+
+REM Fix files with backup
+fix-lvgl940.bat --backup eez-flow.cpp eez-flow.h
+```
+
+**Using Makefile:**
+```bash
+# Fix with defaults (eez-flow.cpp eez-flow.h)
+make fix
+
+# Fix with backup
+make fix-backup
+
+# Fix specific files
+make fix EEZ_SOURCES="eez-flow.cpp eez-flow.h eez-actions.cpp"
 ```
 
 #### What it fixes

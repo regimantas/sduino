@@ -80,6 +80,19 @@ guide](https://tenbaht.github.io/sduino/api/migration/) for details.
 
 
 
+## Additional Tools
+
+### EEZ Studio LVGL 9.40 Compatibility
+
+Tools for fixing EEZ Studio generated code to work with LVGL 9.40 and newer.
+See [tools/eez-studio/README.md](tools/eez-studio/README.md) for details.
+
+Quick start:
+```bash
+python tools/eez-studio/fix-lvgl940.py --in-place eez-flow.cpp eez-flow.h
+```
+
+
 ## Compatibility with the Arduino world
 
 Since there is no free C++ for the STM8, it is impossible to do a full 1:1
