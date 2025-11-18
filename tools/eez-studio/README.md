@@ -2,6 +2,18 @@
 
 This directory contains tools to fix compatibility issues between EEZ Studio generated code and LVGL 9.40.
 
+## 🚀 Quick Start (5 Minutes)
+
+**Just run one command after generating code with EEZ Studio:**
+
+```bash
+python fix-lvgl940.py --in-place eez-flow.cpp eez-flow.h
+```
+
+**That's it!** Your code will now compile with LVGL 9.40.
+
+👉 [See Quick Fix Guide](QUICK_FIX.md) | [Lietuvių kalba](LIETUVIU.md)
+
 ## Problem
 
 EEZ Studio generates code for LVGL that may not be compatible with LVGL 9.40 and newer versions. The main issues are:

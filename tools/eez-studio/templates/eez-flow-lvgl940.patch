@@ -1,0 +1,17 @@
+--- eez-flow.cpp.orig	2025-11-18 16:00:00.000000000 +0000
++++ eez-flow.cpp	2025-11-18 16:30:00.000000000 +0000
+@@ -3834,7 +3834,7 @@
+ // Animation callback for opacity
+-static int32_t anim_callback_get_opacity(lv_anim_t * a) { return lv_obj_get_style_opa((lv_obj_t *)a->user_data, 0); }
++static int32_t anim_callback_get_opacity(lv_anim_t * a) { return lv_obj_get_style_opa((lv_obj_t *)a->user_data, LV_PART_MAIN); }
+ 
+ // ... (other functions)
+ 
+@@ -4401,7 +4401,7 @@
+ void objGetStyleOpa(FlowState *flowState, unsigned int componentIndex, const ListOfAssetsPtr<Property> &properties, uint32_t propertyIndex) {
+     lv_obj_t *obj = (lv_obj_t *)getLvglObjectFromIndex(componentIndex);
+-    int32_t opa = (int32_t)lv_obj_get_style_opa(obj, 0);
++    int32_t opa = (int32_t)lv_obj_get_style_opa(obj, LV_PART_MAIN);
+     
+     // ... rest of the function
+ }
